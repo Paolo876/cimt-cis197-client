@@ -1,0 +1,82 @@
+@import "./variables.scss";
+
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scroll-behavior: smooth;
+
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+ol, ul {
+	list-style: none;
+  color: inherit;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+button {
+  background-color: transparent;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+}
+button:disabled{
+  cursor: not-allowed;
+}
+
+input, textarea {
+  all: unset;
+  outline: 1px solid black;
+  padding: .4em;
+  border-radius: .25em;
+  font-size: 1.1em;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  &:focus{
+    outline: 2px solid $primary-color;
+  }
+}
+
+body {
+  height: 100%;
+  text-rendering: optimizeSpeed;
+  font-family: $primary-font;
+}
+
+// ::-webkit-scrollbar {
+//   width: 15px;
+// }
+// ::-webkit-scrollbar-track {
+//   background-color: rgba(34, 34, 34, 0.932);
+// }
+// ::-webkit-scrollbar-thumb {
+//   background-color: var(--light-color);
+//   border-radius: 20px;
+//   border: 6px solid transparent;
+//   background-clip: content-box;
+// }

@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+
+.search-results {
+    border-top: 1px solid $primary-color;
+    margin-top: 2em;
+    padding-top: 2em;
+    h3 {
+        font-weight: 600;
+        font-size: 1.7em;
+        margin-bottom: 1.5em;
+        letter-spacing: .05em;
+        position: relative;
+        text-align: left;           
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        li{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            text-align: center;
+            gap: 2em;
+            padding: .75em 0;
+            border-top: 1px solid rgba(0,0,0,0.15);
+            &:last-child{
+                border-bottom: 1px solid rgba(0,0,0,0.15);
+            }
+            &.header {
+                font-weight: 600;
+                letter-spacing: .02em;
+                background-color: $primary-color;
+                color: white;
+            }
+            span{
+                width: 20%;
+                padding: .25em;
+            }
+        }
+    }
+}

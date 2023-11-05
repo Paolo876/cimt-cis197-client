@@ -1,0 +1,160 @@
+@import "../../variables.scss";
+
+.main-menu-page{
+    background-color: lightgray;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .header-container {
+        background-color: white;
+        border-bottom: 30px solid $primary-color;
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            // justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 80px;
+            padding: .25em;
+            position: relative;
+            align-items: center;
+            .header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                h1 {
+                    margin-left: 1em;
+                    letter-spacing: .1em;
+                    font-size: 2.3em;
+                }
+            }
+            .logo{
+                height: 50px;
+                width: auto;
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .user-info{
+                margin-left: auto;
+                margin-right: 2em;
+                text-align: right;
+                
+                .name {
+                    font-weight: 600;
+                    font-size: 1.2em;
+                    letter-spacing: .02em;
+                    margin-bottom: .25em;
+                    display: flex;
+                    flex-direction: row;
+                    span {
+                        align-self: flex-start;
+                        padding: .1em .2em;
+                        background-color: $secondary-color;
+                        border: 1px solid rgba(0,0,0,0.05);
+                        border-radius: 5px;
+                        margin-left: .25em;
+                        font-size: .6em;
+                        font-weight: 400;
+                        letter-spacing: .001em;
+                    }
+                }
+                .desc {
+                    opacity: .9;
+                    font-weight: 300;
+                    font-size: .8em;
+                    span { 
+                        opacity: 1;
+                        font-weight: 500;
+                        font-size: 1.2em;
+                        letter-spacing: .02em;
+
+                    }
+                }
+            }
+
+            .logout-container{
+                color: white;
+                margin-left: 2em;
+                button {
+                    border-radius: 8px;
+                    background-color: black;
+                    padding: .9em 1.5em;
+                    font-weight: 500;
+                    // border: 1px solid black;
+                    opacity: .9;
+                    transition: 200ms opacity ease-in-out, 200ms background ease-in-out;
+                    &:hover{
+                        opacity: 1;
+                        background-color: $primary-color;
+
+                    }
+                }
+            }
+        }
+    }
+    .main-container{
+        // background-color: $primary-color;
+        height: 100%;
+
+        .container{
+            margin: 3em auto;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+
+            h1{
+                letter-spacing: .1em;
+                font-size: 2.5em;
+            }
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 5em;
+                
+                li{
+                    a{
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        border: 5px solid $secondary-color;
+                        background-color: white;
+                        width: 250px;
+                        height: 225px;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        user-select: none;
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                        transition: transform 200ms ease;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                        img {
+                            max-height: 75px;
+                            width: auto;
+                            opacity: .75;
+                            margin: 2em;
+                        }
+                        p {
+                            margin-top: 1.5em;
+                            background-color: $secondary-color;
+                            font-weight: 600;
+                            padding: 1em;
+                            width: 100%;
+                        }
+    
+                    }
+
+
+                }
+            }
+        }
+    }
+}
